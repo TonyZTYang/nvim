@@ -1,0 +1,9 @@
+# alias for nvim
+alias vim='nvim'
+alias vimdiff='nvim -d'
+alias v='nvim'
+export EDITOR=nvim
+
+# alias for ranger
+alias r='ranger'
+alias ranger='ranger --choosedir=$HOME/.rangerdir; LASTDIR=`cat $HOME/.rangerdir`; cd "$LASTDIR"'
