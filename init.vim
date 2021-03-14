@@ -13,12 +13,16 @@ if !exists('g:vscode')
 
 	:imap jk <Esc>
 	:imap kj <Esc>
+	" nerdtree shortcut
 	nmap ff :NERDTreeToggle<CR>
+	" tagbar shortcut
+	nmap tb :TagbarToggle<CR>
 	nmap Q :q<CR>
 
 	call plug#begin('~/.config/nvim/plugged')
 	Plug 'neoclide/coc.nvim', {'branch': 'release'}
 	Plug 'scrooloose/nerdtree'
+	Plug 'preservim/tagbar'
 	call plug#end()
 
 " * start of coc.nvim related settings
