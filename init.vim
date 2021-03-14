@@ -13,16 +13,18 @@ if !exists('g:vscode')
 
 	:imap jk <Esc>
 	:imap kj <Esc>
+	nmap Q :q<CR>
 	" nerdtree shortcut
 	nmap ff :NERDTreeToggle<CR>
-	" tagbar shortcut
-	nmap tb :TagbarToggle<CR>
-	nmap Q :q<CR>
+	" leaderf shortcut
+	nmap fb :Leaderf function<CR>
+	nmap ft :Leaderf tag<CR>
 
 	call plug#begin('~/.config/nvim/plugged')
 	Plug 'neoclide/coc.nvim', {'branch': 'release'}
 	Plug 'scrooloose/nerdtree'
-	Plug 'preservim/tagbar'
+	Plug 'Yggdroot/LeaderF', { 'do': ':LeaderfInstallCExtension' }
+	Plug 'preservim/nerdcommenter'
 	call plug#end()
 
 " * start of coc.nvim related settings
@@ -80,4 +82,34 @@ if !exists('g:vscode')
 	
 " * end of coc.nvim related settings
 
+" * nerdcommenter settings
+
+" Create default mappings
+let g:NERDCreateDefaultMappings = 1
+
+" Add spaces after comment delimiters by default
+let g:NERDSpaceDelims = 1
+
+" Use compact syntax for prettified multi-line comments
+let g:NERDCompactSexyComs = 1
+
+" Align line-wise comment delimiters flush left instead of following code indentation
+let g:NERDDefaultAlign = 'left'
+
+" Set a language to use its alternate delimiters by default
+let g:NERDAltDelims_java = 1
+
+" Add your own custom formats or override the defaults
+let g:NERDCustomDelimiters = { 'c': { 'left': '/**','right': '*/' } }
+
+" Allow commenting and inverting empty lines (useful when commenting a region)
+let g:NERDCommentEmptyLines = 1
+
+" Enable trimming of trailing whitespace when uncommenting
+let g:NERDTrimTrailingWhitespace = 1
+
+" Enable NERDCommenterToggle to check all selected lines is commented or not 
+let g:NERDToggleCheckAllLines = 1
+
+" * end of nerdcommenter settings
 endif
