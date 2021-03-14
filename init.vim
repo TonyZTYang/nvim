@@ -17,7 +17,7 @@ if !exists('g:vscode')
 	" nerdtree shortcut
 	nmap ff :NERDTreeToggle<CR>
 	" leaderf shortcut
-	nmap fb :Leaderf function<CR>
+	nmap fn :Leaderf function<CR>
 	nmap ft :Leaderf tag<CR>
 
 	call plug#begin('~/.config/nvim/plugged')
