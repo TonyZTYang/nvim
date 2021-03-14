@@ -25,6 +25,7 @@ if !exists('g:vscode')
 	Plug 'scrooloose/nerdtree'
 	Plug 'Yggdroot/LeaderF', { 'do': ':LeaderfInstallCExtension' }
 	Plug 'preservim/nerdcommenter'
+	Plug 'jiangmiao/auto-pairs'
 	call plug#end()
 
 " * start of coc.nvim related settings
