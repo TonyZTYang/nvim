@@ -14,11 +14,12 @@ if !exists('g:vscode')
 	:imap jk <Esc>
 	:imap kj <Esc>
 	nmap Q :q<CR>
+	nmap W :wq<CR>
 	" nerdtree shortcut
-	nmap ff :NERDTreeToggle<CR>
+	nmap tt :NERDTreeToggle<CR>
 	" leaderf shortcut
-	nmap fn :Leaderf function<CR>
-	nmap ft :Leaderf tag<CR>
+	nmap tn :Leaderf function<CR>
+	nmap tf :Leaderf tag<CR>
 
 	call plug#begin('~/.config/nvim/plugged')
 	Plug 'neoclide/coc.nvim', {'branch': 'release'}
@@ -26,6 +27,7 @@ if !exists('g:vscode')
 	Plug 'Yggdroot/LeaderF', { 'do': ':LeaderfInstallCExtension' }
 	Plug 'preservim/nerdcommenter'
 	Plug 'jiangmiao/auto-pairs'
+	Plug 'gcmt/wildfire.vim'
 	call plug#end()
 
 " * start of coc.nvim related settings
@@ -45,9 +47,6 @@ if !exists('g:vscode')
 		      \ coc#refresh()
     inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
     inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
-
-	" Use K to show documentation in preview window.
-	nnoremap <silent> K :call <SID>show_documentation()<CR>
 
 	" Having longer updatetime (default is 4000 ms = 4 s) leads to noticeable
 	" delays and poor user experience.
